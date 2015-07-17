@@ -1,0 +1,6 @@
+[submodule "showdown"]
+	path = showdown
+	url = https://github.com/showdownjs/showdown.git
+[submodule "js/DOMPurify"]
+	path = DOMPurify
+	url = https://github.com/cure53/DOMPurify.git

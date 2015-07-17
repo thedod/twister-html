@@ -1,3 +1,34 @@
+### Proof of Concept - showdown + DOMpurify
+
+I just ditched entire htmlFormatMsg()
+and replaced it with a simple call to those 2 libs.
+This means it currently doesn't show @mentions and #hashtags
+Plain showdown is vulnerable to XSS example by @jboss
+https://imgur.com/sVIXNyC,jjkijIJ#0
+DOMpurify defuses it nicely
+https://imgur.com/sVIXNyC,jjkijIJ#1
+
+**note:**
+At the moment you need to do `git submodule update --init` to fetch showdown and DOMpurify.
+I don't think we need to do this for production (we only take 2 minified js files) because this would
+complicate packaging for archlinux etc. OTOH, we should solve licensing/attribution issues, while
+git submodule doesn't have such a problem :wink:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------
+
 twister-html
 ============
 
